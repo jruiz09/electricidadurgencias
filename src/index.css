@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/*
+  Tailwind v4 usa configuración "CSS-first": los tokens de theme se declaran
+  acá con @theme (no en tailwind.config.js, que solo se usaría con @config).
+  "night" es la escala oscura de marca; amber ya viene en la paleta por defecto.
+*/
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-night-900: #0b1120;
+  --color-night-800: #111827;
+  --color-night-700: #1f2937;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Deja lugar para la barra fija de llamada en mobile */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 64px;
+  }
+}
